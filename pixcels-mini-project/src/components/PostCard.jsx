@@ -12,15 +12,15 @@ const bull = (
   </Box>
 );
 
-export default function PostCard() {
+export default function PostCard(props) {
   return (
-    <Card sx={{ minWidth: 275, "margin-left":"30px"
+    <Card sx={{ minWidth: 275, "margin-left":"30px", "margin-bottom":"30px"
      }}>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          Word of the Day
+        <Typography sx={{ fontSize: 14 , width:"100px" ,heigth:"100px"}} color="text.secondary" gutterBottom>
+          {props.title}
         </Typography>
-        <Typography variant="h5" component="div">
+        {/* <Typography variant="h5" component="div">
           be{bull}nev{bull}o{bull}lent
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
@@ -30,8 +30,8 @@ export default function PostCard() {
           well meaning and kindly.
           <br />
           {'"a benevolent smile"'}
-        </Typography>
-        <Typography variant="body2">
+        </Typography>*/}
+        <Typography variant="body2"> 
         <Button size="small">Learn More</Button>
         </Typography>
       </CardContent>
